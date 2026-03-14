@@ -52,11 +52,11 @@ const Loading = () => (
 import { Layout } from "@/components/Layout";
 
 const ToolPage = ({ Component }: { Component: React.LazyExoticComponent<() => JSX.Element> }) => (
-  <Layout>
-    <Suspense fallback={<Loading />}>
+  <Suspense fallback={<Loading />}>
+    <Layout>
       <Component />
-    </Suspense>
-  </Layout>
+    </Layout>
+  </Suspense>
 );
 
 const App = () => (
